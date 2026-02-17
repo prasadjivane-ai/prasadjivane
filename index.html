@@ -301,6 +301,7 @@
         <a href="https://linkedin.com/in/prasadjivane" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
     </footer>
+  
   </main>
 
   <script>
@@ -340,7 +341,6 @@
       window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e)=>{
         if((localStorage.getItem(THEME_KEY) || 'system') === 'system') applyTheme('system');
       });
-
       toggle?.addEventListener('click', ()=>{
         const current = localStorage.getItem(THEME_KEY) || 'system';
         const next = nextMode(current);
