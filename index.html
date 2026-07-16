@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="system">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -30,15 +30,15 @@
 
   <style>
     :root{
-      --bg: #0a0b0f;
-      --bg-90: rgba(10,11,15,.9);
-      --card: #13141b;
-      --text: #f4f4f5;
-      --muted: #a1a1aa;
-      --accent: #7dd3fc;
-      --accent-2:#c084fc;
-      --border: #27272a;
-      --link:#93c5fd;
+      --bg:#ffffff;
+      --bg-90: rgba(255,255,255,.9);
+      --card:#fafafa;
+      --text:#0a0b0f;
+      --muted:#4b5563;
+      --accent:#0284c7;
+      --accent-2:#9333ea;
+      --border:#e5e7eb;
+      --link:#2563eb;
       --shadow: 0 8px 24px rgba(0,0,0,.25);
       --radius: 14px;
       --maxw: 1120px;
@@ -336,7 +336,7 @@
       function nextMode(current){
         return current === 'system' ? 'light' : current === 'light' ? 'dark' : 'system';
       }
-      const saved = localStorage.getItem(THEME_KEY) || 'system';
+      const saved = localStorage.getItem(THEME_KEY) || 'light';
       applyTheme(saved);
       window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e)=>{
         if((localStorage.getItem(THEME_KEY) || 'system') === 'system') applyTheme('system');
@@ -382,13 +382,6 @@
                 event.preventDefault();
             }
         });
-        setInterval(() => {
-            if (window.outerHeight - window.innerHeight > 160) {
-                document.body.innerHTML = '';
-                alert("DevTools is not allowed on this site.");
-                window.location.reload();
-            }
-        }, 1000);
   </script>
   
 </body>
